@@ -1,0 +1,16 @@
+Câu 4:
+ - Các phương thức vòng đời được gọi khi ứng dụng chay: 
+   onCreate -> onStart -> onResume
+ - Khi người dùng bấm nút back:
+   onPause -> onStop -> onDetroy
+ - Khi mở lại ứng dụng:
+   onCreate -> onStart -> onResume
+câu 5:
+ - Các phương thức vòng đời được gọi khi ứng dụng chay: 
+   onCreate -> onStart -> onResume
+ - Khi người dùng bấm nút home:
+   onPause -> onStop
+ - Khi mở lại ứng dụng:
+   onReStart -> onStart -> onResume
+Câu 6:
+ - Lưu thông tin của ứng dụng để khôi phục lại trạng thái hiển thị của ứng dụng chạy lại ứng dụng thì cần phải thực hiện trong phương thức vòng đời: onPause hoặc sử dụng onSaveInstanceState để lưu trữ trạng thái Activity. Vì khi chuyển sang Activity khác thì Activity trong lúc này có thể bị hệ thống kill. Nên ưu tiên lưu trạng thái trong onPause có những trường hợp mà sẽ không cần lưu trạng thái chẳng hạn như khi người dùng rời bỏ Activity bằng cách sử dụng nút quay lại hoặc gọi finish thì onSaveInstanceState sẽ không hoạt.
